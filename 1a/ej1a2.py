@@ -43,8 +43,23 @@ Exemple:
 
 def sum_odd_numbers(list_numbers):
     # Write here your code
+    if isinstance(list_numbers, list):
+        print("Es una lista")
+    else:
+        return ValueError("El parámetro debe ser una lista.")   
+    
+    p = 0
+    long = len(list_numbers)
+    suma = 0
+    for p in range (long):
+        if not isinstance(list_numbers[p], int) or list_numbers[p] < 0:
+            raise ValueError("La lista debe contener solo números enteros positivos.")
+        else:
+            if list_numbers[p] % 2 != 0:
+                suma = suma + list_numbers[p]
+    return suma
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
