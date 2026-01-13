@@ -67,8 +67,12 @@ import math
 
 def calculate_angle(angle):
     # Write here your code
+    radians = math.radians(angle)
+    sine_value = math.sin(radians)
+    return round(sine_value, 2)
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+print(calculate_angle(270))

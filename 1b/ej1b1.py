@@ -36,8 +36,12 @@ Exemple:
 
 def obtain_max(list_numbers):
     # Write here your code
-    pass
+    max_number = list_numbers[0]
+    for number in list_numbers[1:]:
+        if number > max_number:
+            max_number = number
+    return max_number
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(obtain_max([1, 45, 87, 21, 0, 23, 28]))
+print(obtain_max([1, 45, 87, 21, 0, 23, 28]))
